@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>journalme.AJS</title>
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <form method="post" action="connection.php">
+    <div id="wrapper">
+        <header>
+        <!--
+            Name, Motivation|Color|Save|Log, and Date
+        --> 
+    <section>
+        <h1 class="navigation">Austin Steffes</h1>
+        <h1 id="todaysDate"></h1>
+    </section>  
+        
+        </header>
+        <!--
+            Journal, Prompts 1-4
+        -->
+    <section class="left">
+        <h1>What are your thoughts about today?</h1>
+        <textarea rows="10" cols="80" name="thoughts"></textarea>
+        <h1>How is your career/coding journey going so far?</h1>
+        <textarea rows="10" cols="80" name="career"></textarea>
+    </section>
+    <section class="right">
+        <h1>How is your fitness journey going so far?</h1>
+        <textarea rows="10" cols="80" name="fitness"></textarea>
+        <h1>Anything else to talk about today?</h1>
+        <textarea rows="10" cols="80" name="anythingelse"></textarea>
+        <input class="" type="submit" value="Submit" />
+    </section>
+    </form>
+    </div>
+
+    
+    <script>
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yyyy = today.getFullYear();
+
+        today = mm + '/' + dd + '/' + yyyy;
+        document.getElementById("todaysDate").innerText = today;
+        //today.style.fontSize = "32pt"; increase font size problem.
+
+    </script>
+</body>
+</html>

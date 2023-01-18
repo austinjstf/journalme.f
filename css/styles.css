@@ -1,0 +1,28 @@
+body {
+
+    width: 1450px;
+    background-color:black;
+    color: white;
+    animation: myanimation 60s infinite;
+
+}
+button {
+
+    border-radius: 100px;
+    width: 200px;
+    height: 100px;
+    color: black;
+
+}
+@keyframes myanimation {
+    0% {background-color: lightslategray;}
+    25%{background-color:cadetblue;}
+    50%{background-color:dimgray;}
+    75%{background-color:darkgrey;}
+    100% {background-color: lightsteelblue;}
+  }
+h2 {
+
+color: black;
+
+}
